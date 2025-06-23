@@ -1,0 +1,15 @@
+{
+  "builders": [{
+    "type": "arm-image",
+    "iso_url": "https://downloads.raspberrypi.com/raspios_lite_arm64_latest",
+    "image_type": "sd",
+    "target_image_size": "4GB",
+    "boot_partition_size": "256MB",
+    "cloud_init": true
+  }],
+  "provisioners": [
+    { "type": "shell", "script": "scripts/01_enable_gadget.sh" },
+    { "type": "shell", "script": "scripts/02_install_kalico.sh" },
+    { "type": "shell", "script": "scripts/03_install_rust_stack.sh" }
+  ]
+}

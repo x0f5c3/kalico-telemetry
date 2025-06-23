@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "kalico_core",
+    "ffi_py",
+    "service"
+]
+resolver = "3"

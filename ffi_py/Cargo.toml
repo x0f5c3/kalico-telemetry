@@ -1,0 +1,11 @@
+[package]
+name = "ffi_py"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.25.1", features = ["abi3-py38"] }
+kalico_core = { path = "../kalico_core" }
