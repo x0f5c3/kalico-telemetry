@@ -5,8 +5,9 @@ usb = USB_VCP()
 uart = UART(0, 115200)
 
 while True:
-    if usb.any():
-        uart.write(usb.read(usb.any()))
+    usb_data_available = usb.any()
+    if usb_data_available:
+        uart.write(usb.read(usb_data_available))
     if uart.any():
         usb.write(uart.read(uart.any()))
     time.sleep_ms(1)
