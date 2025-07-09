@@ -1,0 +1,12 @@
+[package]
+name = "pico_uart_bridge"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rp-pico = { version = "0.9", features = ["rt", "critical-section-impl"] }
+usb-device = "0.3"
+usbd-serial = "0.2"
+fugit = "0.3"
+panic-halt = "0.2"
+heapless = "0.8"
