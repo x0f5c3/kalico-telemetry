@@ -135,9 +135,7 @@ unsafe fn USBCTRL_IRQ() {
             if let Ok(count) = serial_ref.read(&mut buf) {
                 if count > 0 {
                     for &b in &buf[..count] {
-                        if let Some(q) = USB_TO_UART.enqueue(b).ok() {
-                            let _ = q; // suppress unused warning
-                        }
+                        USB_TO_UART.enqueue(b).ok();
                     }
                 }
             }

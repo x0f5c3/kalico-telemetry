@@ -2,5 +2,6 @@
 members = [
     "kalico_core",
     "ffi_py",
-    "service", "pico_bridge/pico_uart_bridge"]
+    "service",
+    "pico_bridge/pico_uart_bridge"]
 resolver = "3"
